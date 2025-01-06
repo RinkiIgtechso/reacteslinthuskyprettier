@@ -68,12 +68,12 @@ export default tseslint.config(
   },
 );
 ````
-And try to add something in your ``` App.tsx``` file. For example: you can include a variable that is not in used.
-So, when you run the npm run lint command, it should through error of no-unused-var of eslint with typescript. If that so, then you have successfully set up the eslint in your project 🎊.
+And try to add something to your "App.tsx" file. For example, you can include a variable that is not used.
+So, when you run the npm run lint command, it should fail with the error "no-unused-var of eslint with typescript." If that's the case, then you have successfully set up eslint in your project 🎊.
 
-Now as we have completed set up for eslint & prettier, we need to add husky. And for this we need to run certain command 👇:
+Now that we have completed the setup for eslint & prettier, we need to add Husky. And for this, we need to run certain commands 👇:
 
-And also modify the ```.prettierrc``` file. Add the below code in your file:
+Also, modify the ```.prettierrc``` file. Add the below code to your file:
 ```` 
 {
     "trailingComma": "all",
@@ -87,18 +87,18 @@ And also modify the ```.prettierrc``` file. Add the below code in your file:
 }
 ````
 
-These configurations in the Prettier file help standardize the code formatting across the project, ensuring consistency and readability.Including these rules in your Prettier config ensures a consistent coding style, avoids common formatting pitfalls, and simplifies collaboration in larger teams.
+These configurations in the Prettier file help standardize the code formatting across the project, ensuring consistency and readability. Including these rules in your Prettier config ensures a consistent coding style, avoids common formatting pitfalls, and simplifies collaboration in larger teams.
 
 - `` npm install --save-dev husky lint-staged ``
 - `` npx husky init ``
 - `` node --eval "fs.writeFileSync('.husky/pre-commit','npx lint-staged\n')" ``
 
-We have set up React TypeScript project with Vite and adding ESLint, Prettier, and Husky, and each tool serves a specific purpose in ensuring code quality, style consistency, and automated checks. 
+We have set up the React TypeScript project with Vite and adding ESLint, Prettier, and Husky, and each tool serves a specific purpose in ensuring code quality, style consistency, and automated checks. 
 
 ### How They Work Together:
 - ESLint checks for code quality and TypeScript errors.
 - Prettier ensures the code is consistently formatted.
-- Husky automates running these checks before commits to ensure code quality and formatting rules are followed by all developers, enforcing them before code is committed.
+- Husky automates running these checks before committing to ensuring code quality and formatting rules are followed by all developers, enforcing them before code is committed.
 
 
 ### Example Workflow:
